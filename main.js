@@ -43,38 +43,38 @@ function makeGrid(cells){
     
 // }
 
-function validateInput(){
-    const validBut = document.createElement("button");
-    if (addInput()){
-        side_bar.appendChild(validBut);
-    }
-    let userSize = Number(input);
-    console.log(userSize);
-}
-resetBut.addEventListener('click', () => {
-    let input = document.createElement('input')
-    input.placeholder = "What's the grid size?"
-    input.name = "userSize";
-    side_bar.appendChild(input);
-});
-
-function getInput(){
-    console.log(input.value);
-}
+// function validateInput(){
+//     const validBut = document.createElement("button");
+//     if (addInput()){
+//         side_bar.appendChild(validBut);
+//     }
+//     let userSize = Number(input);
+//     console.log(userSize);
+// }
 // resetBut.addEventListener('click', () => {
-//     let userSize = Number(prompt("What's the grid size? ", 0));
+//     let input = document.createElement('input')
+//     input.placeholder = "What's the grid size?"
+//     input.name = "userSize";
+//     side_bar.appendChild(input);
+// });
 
-//     while (userSize > 100){
-//         userSize = Number(prompt("What's the grid size? ", '<100'));
-//     }
-//     const wrapper = document.querySelector('.wrapper')
-//     if (!wrapper){
-//         makeGrid(userSize);
-//     }else{
-//         wrapper.remove()
-//         makeGrid(userSize)
-//     }
+// function getInput(){
+//     console.log(input.value);
+// }
+resetBut.addEventListener('click', () => {
+    let userSize = Number(prompt("What's the grid size? ", 0));
 
+    while (userSize > 100){
+        userSize = Number(prompt("What's the grid size? ", '<100'));
+    }
+    const wrapper = document.querySelector('.wrapper')
+    if (!wrapper){
+        makeGrid(userSize);
+    }else{
+        wrapper.remove()
+        makeGrid(userSize)
+    }
+})
 // })
 // makeGrid(cells)
 // //alternative //eventListener tochange bg-color
@@ -83,4 +83,3 @@ function getInput(){
 //     div.addEventListener('mouseenter', () => {
 //         div.style.backgroundColor = 'orange'
 //     })
-// })
